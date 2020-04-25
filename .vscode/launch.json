@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ProductsApplication<products>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.scaliionlead.products.ProductsApplication",
+            "projectName": "products",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ProvidersApplication<providers>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.scaliionlead.providers.ProvidersApplication",
+            "projectName": "providers",
+            "args": ""
+        }
+    ]
+}
