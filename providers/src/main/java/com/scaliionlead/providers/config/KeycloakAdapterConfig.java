@@ -1,4 +1,4 @@
-package com.scaliionlead.products.config;
+package com.scaliionlead.providers.config;
 
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.keycloak.adapters.springsecurity.KeycloakConfiguration;
@@ -48,7 +48,7 @@ public class KeycloakAdapterConfig extends KeycloakWebSecurityConfigurerAdapter 
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
         // hasAuthority instead of hasRole
-        http.authorizeRequests().antMatchers("/products*").hasAuthority("user").antMatchers("/products/*")
+        http.authorizeRequests().antMatchers("/providers*").hasAuthority("user").antMatchers("/providers/*")
                 .hasAuthority("admin").anyRequest().authenticated();
 
     }

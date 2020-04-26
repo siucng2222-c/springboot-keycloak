@@ -1,5 +1,6 @@
 package com.scaliionlead.products.proxies;
 
+import com.scaliionlead.products.config.FeignClientConfiguration;
 import com.scaliionlead.products.models.Provider;
 
 import org.springframework.cloud.openfeign.FeignClient;
@@ -10,7 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
  * ProviderProxy
  */
 
-@FeignClient(name = "providers-service", url = "${microservice.providers.url}")
+@FeignClient(name = "providers-service", url = "${microservice.providers.url}", configuration = {
+        FeignClientConfiguration.class })
 public interface ProviderProxy {
 
     @GetMapping(value = "/providers/{id}")
